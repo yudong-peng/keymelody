@@ -1,10 +1,10 @@
 {
   "name": "keymelody",
-  "version": "0.5.0",
+  "version": "0.6.2",
   "private": true,
-  "description": "键间：浏览器游戏弹琴练习室，纯静态网站",
+  "description": "键间：游戏弹琴练习室，纯静态网页",
   "scripts": {
-    "test": "node check.cjs && node import-check.cjs && node board-check.cjs && node audio-check.cjs"
+    "test": "node check.cjs && node rhythm-check.cjs && node import-check.cjs && node board-check.cjs && node audio-check.cjs"
   },
   "engines": {
     "node": ">=18"
