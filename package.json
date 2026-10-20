@@ -1,0 +1,12 @@
+{
+  "name": "keymelody",
+  "version": "0.5.0",
+  "private": true,
+  "description": "键间：浏览器游戏弹琴练习室，纯静态网站",
+  "scripts": {
+    "test": "node check.cjs && node import-check.cjs && node board-check.cjs && node audio-check.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

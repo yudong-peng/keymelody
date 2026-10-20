@@ -1,0 +1,714 @@
+{
+  "version": "cc0-20261020-2",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "processing": "Selected one velocity/take; mono 32kHz MP3 112kbps, trim leading silence, max 6 seconds, peak normalize, 90ms end fade. SFZ Kalimba cent tuning retained; VCSL filename octaves converted +12 to scientific MIDI. Nearest-root pitch shifting; no SFZ loops, release samples, or round robin.",
+  "instruments": [
+    {
+      "id": "piano-kw",
+      "name": "立式钢琴",
+      "credit": "FreePats · Upright Piano KW",
+      "sourceUrl": "https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html#UprightKW",
+      "license": "CC0-1.0",
+      "gain": 0.75,
+      "bytes": 748521,
+      "samples": [
+        {
+          "root": 47,
+          "tune": 0,
+          "url": "piano-kw/47.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "B2vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "42ee1418297e97980064b724b53de733358185d4a6f25db14fd490bf7fa6060a"
+        },
+        {
+          "root": 51,
+          "tune": 0,
+          "url": "piano-kw/51.mp3",
+          "bytes": 77661,
+          "duration": 5.45,
+          "originalFile": "D#3vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "ce253d35223e33ab0cd8fc3923ba290d8ef8ac84b23acd7ac4d3a59be031990b"
+        },
+        {
+          "root": 54,
+          "tune": 0,
+          "url": "piano-kw/54.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "F#3vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "abdbb744ed9a7e0cdd41cbd63ffb9f181cfc34f81a0a6d884d411656c1e8a978"
+        },
+        {
+          "root": 57,
+          "tune": 0,
+          "url": "piano-kw/57.mp3",
+          "bytes": 60525,
+          "duration": 4.236,
+          "originalFile": "A3vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "cedf59f6a388a8251e51f4dff8a95ae1904a47235c3b97405dd1df330d7559ef"
+        },
+        {
+          "root": 60,
+          "tune": 0,
+          "url": "piano-kw/60.mp3",
+          "bytes": 69093,
+          "duration": 4.839,
+          "originalFile": "C4vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "a4d156e55564bbd03f1ad214574ce9e7452b7351f5ac44f57fb8dbc52337ffc2"
+        },
+        {
+          "root": 63,
+          "tune": 0,
+          "url": "piano-kw/63.mp3",
+          "bytes": 70605,
+          "duration": 4.935,
+          "originalFile": "D#4vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "424ba9c60f4d646d0554d502de9bcc51c186fd83140f397320fd9268b1f7e7db"
+        },
+        {
+          "root": 66,
+          "tune": 0,
+          "url": "piano-kw/66.mp3",
+          "bytes": 60021,
+          "duration": 4.203,
+          "originalFile": "F#4vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "7910cab70deffce97cf48be43c5fc4442bf64db2f396c9897884beaa9f68ff9c"
+        },
+        {
+          "root": 69,
+          "tune": 0,
+          "url": "piano-kw/69.mp3",
+          "bytes": 42885,
+          "duration": 2.959,
+          "originalFile": "A4vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "df907e4fcca293287ec5a485bd47b147e982a979e8bccc4ed3b38559637547b5"
+        },
+        {
+          "root": 72,
+          "tune": 0,
+          "url": "piano-kw/72.mp3",
+          "bytes": 49941,
+          "duration": 3.47,
+          "originalFile": "C5vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "8430b92e75c2b720db5900e1cb357e4824bf625fcf458bc34aaaab44a6873306"
+        },
+        {
+          "root": 75,
+          "tune": 0,
+          "url": "piano-kw/75.mp3",
+          "bytes": 45405,
+          "duration": 3.158,
+          "originalFile": "D#5vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "5f50e827f6414d733379a27493ff9431e7a8f3b9d51c78ed794f65b07c4fa479"
+        },
+        {
+          "root": 78,
+          "tune": 0,
+          "url": "piano-kw/78.mp3",
+          "bytes": 28773,
+          "duration": 1.967,
+          "originalFile": "F#5vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "59b43ecb8e7717c2462ab81df55879eec29f5e336d330bc6936a6698aa1e9c1d"
+        },
+        {
+          "root": 81,
+          "tune": 0,
+          "url": "piano-kw/81.mp3",
+          "bytes": 40869,
+          "duration": 2.839,
+          "originalFile": "A5vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "408e26fa033524d775a6c9f3fd866c09c921a7d280a91dddbd8a8dabd10d8d37"
+        },
+        {
+          "root": 84,
+          "tune": 0,
+          "url": "piano-kw/84.mp3",
+          "bytes": 32301,
+          "duration": 2.21,
+          "originalFile": "C6vH.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-small-SFZ+FLAC-20190703.7z",
+          "originalSha256": "955e295be02fd475a5a2c1ce9b982749c2407168e8ea744c5d6485213cf8ac45"
+        }
+      ]
+    },
+    {
+      "id": "nylon",
+      "name": "古典吉他",
+      "credit": "FreePats · Spanish Classical Guitar",
+      "sourceUrl": "https://freepats.zenvoid.org/Guitar/acoustic-guitar.html",
+      "license": "CC0-1.0",
+      "gain": 0.65,
+      "bytes": 360810,
+      "samples": [
+        {
+          "root": 48,
+          "tune": 0,
+          "url": "nylon/48.mp3",
+          "bytes": 61533,
+          "duration": 4.296,
+          "originalFile": "C3.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "eac0fe1fc03225d81f813667babee072662c101800bc5ad7fb12d9ef3324b986"
+        },
+        {
+          "root": 53,
+          "tune": 0,
+          "url": "nylon/53.mp3",
+          "bytes": 60021,
+          "duration": 4.197,
+          "originalFile": "F3.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "ea752040ff5373601d41eaf55127b294b5e9f3524f23ddbbd21f1b5edbd0e5ea"
+        },
+        {
+          "root": 57,
+          "tune": 0,
+          "url": "nylon/57.mp3",
+          "bytes": 36837,
+          "duration": 2.525,
+          "originalFile": "A3.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "08d2e90e80839bdb77342d7dcc8a73e0ec8849607d1a750ce433f9e7f0789e06"
+        },
+        {
+          "root": 60,
+          "tune": 0,
+          "url": "nylon/60.mp3",
+          "bytes": 35325,
+          "duration": 2.418,
+          "originalFile": "C4.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "e8fcd63c262ebef3e84d1f24242918cc578f8b0db54049ad109815b01d1226f0"
+        },
+        {
+          "root": 64,
+          "tune": 0,
+          "url": "nylon/64.mp3",
+          "bytes": 53973,
+          "duration": 3.749,
+          "originalFile": "E4.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "b8882fbba2b6a9d0cbae02867be4273aa8f0fddd00bc6f3d993dff6c77997246"
+        },
+        {
+          "root": 67,
+          "tune": 0,
+          "url": "nylon/67.mp3",
+          "bytes": 34821,
+          "duration": 2.41,
+          "originalFile": "G4.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "5e3423ab0440fe8cc337ada529c2bb1696914e4465b336d3635630b4ea7b4916"
+        },
+        {
+          "root": 72,
+          "tune": 0,
+          "url": "nylon/72.mp3",
+          "bytes": 23229,
+          "duration": 1.563,
+          "originalFile": "C5.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "84b8a00c7caff015d8b7165330f0c868fd73d300adb3199cb15452841d1c5444"
+        },
+        {
+          "root": 76,
+          "tune": 0,
+          "url": "nylon/76.mp3",
+          "bytes": 20205,
+          "duration": 1.339,
+          "originalFile": "E5.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "f8323fb0fb66dd655683e1944f0073281e44a6244fdb3f2922851a9cb120bc81"
+        },
+        {
+          "root": 79,
+          "tune": 0,
+          "url": "nylon/79.mp3",
+          "bytes": 21213,
+          "duration": 1.424,
+          "originalFile": "G5.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "0d887f7f14d526e5af1a1aa7060af92c49e3dc57f1e534c215ce93b8e3f31cc8"
+        },
+        {
+          "root": 84,
+          "tune": 0,
+          "url": "nylon/84.mp3",
+          "bytes": 13653,
+          "duration": 0.895,
+          "originalFile": "C6.flac",
+          "originalUrl": "https://freepats.zenvoid.org/Guitar/SpanishClassicalGuitar/SpanishClassicalGuitar-SFZ+FLAC-20190618.7z",
+          "originalSha256": "3de4c476b133858e67f701f28caf249598ffd37e25c9aba1301000a345c5293f"
+        }
+      ]
+    },
+    {
+      "id": "kalimba",
+      "name": "卡林巴",
+      "credit": "FreePats · Kalimba",
+      "sourceUrl": "https://freepats.zenvoid.org/Ethnic/kalimba.html",
+      "license": "CC0-1.0",
+      "gain": 0.7,
+      "bytes": 265464,
+      "samples": [
+        {
+          "root": 53,
+          "tune": 0,
+          "url": "kalimba/53.mp3",
+          "bytes": 41877,
+          "duration": 2.898,
+          "originalFile": "F3_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "607e148a058c3a370443e1270a7abf89998e8700a9db9f532617856178c93d9b"
+        },
+        {
+          "root": 60,
+          "tune": 25,
+          "url": "kalimba/60.mp3",
+          "bytes": 44397,
+          "duration": 3.073,
+          "originalFile": "1_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "8c411aee1914d1647b0394a9eab49684147df650b7f00f145575b424efddeda3"
+        },
+        {
+          "root": 63,
+          "tune": 5,
+          "url": "kalimba/63.mp3",
+          "bytes": 30285,
+          "duration": 2.083,
+          "originalFile": "2_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "c138a13a75622050ebd288c8a82f083131ce208a57c0142e826cff711425a115"
+        },
+        {
+          "root": 64,
+          "tune": -40,
+          "url": "kalimba/64.mp3",
+          "bytes": 36837,
+          "duration": 2.552,
+          "originalFile": "3_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "d64df74e5dd506b0b9a82f67b05b458bcc7964d800906485022f52a0eccb2e60"
+        },
+        {
+          "root": 67,
+          "tune": 7,
+          "url": "kalimba/67.mp3",
+          "bytes": 28269,
+          "duration": 1.942,
+          "originalFile": "4_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "12be72f5d8bf55a12a6654dcb124ea63b12e77a62084bc2f40ad8820a63b6db3"
+        },
+        {
+          "root": 68,
+          "tune": 17,
+          "url": "kalimba/68.mp3",
+          "bytes": 28269,
+          "duration": 1.94,
+          "originalFile": "5_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "1c655fe893c1b26038378c57df0f5dce26b9dd640cf09f619efbf6e61aed8123"
+        },
+        {
+          "root": 72,
+          "tune": 22,
+          "url": "kalimba/72.mp3",
+          "bytes": 28269,
+          "duration": 1.924,
+          "originalFile": "6_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "49bdf372608049680eb649ba0948ff5a2327ab8ca9d800d53199773de74948c4"
+        },
+        {
+          "root": 73,
+          "tune": -15,
+          "url": "kalimba/73.mp3",
+          "bytes": 27261,
+          "duration": 1.87,
+          "originalFile": "7_01.wav",
+          "originalUrl": "https://freepats.zenvoid.org/Ethnic/Kalimba/Kalimba-SFZ-20190723.tar.xz",
+          "originalSha256": "d66471421f5ebd774eae5101efbb243f8b3f0e367f29446981479c4003e38b78"
+        }
+      ]
+    },
+    {
+      "id": "harpsichord",
+      "name": "羽管键琴",
+      "credit": "Versilian Studios · VCSL English Harpsichord",
+      "sourceUrl": "https://github.com/sgossner/VCSL",
+      "license": "CC0-1.0",
+      "gain": 0.65,
+      "bytes": 1530585,
+      "samples": [
+        {
+          "root": 48,
+          "tune": 0,
+          "url": "harpsichord/48.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_C2_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_C2_rr1.wav",
+          "originalSha256": "8601887542f1d51238c5e771d17007303874908d8f40373a31b01eb96edbe1f4"
+        },
+        {
+          "root": 50,
+          "tune": 0,
+          "url": "harpsichord/50.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_D2_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_D2_rr1.wav",
+          "originalSha256": "70f2f6f1ce98488a2103e1d97601ab8996b022a5dfdde81a50eeeba9eacec024"
+        },
+        {
+          "root": 52,
+          "tune": 0,
+          "url": "harpsichord/52.mp3",
+          "bytes": 85221,
+          "duration": 5.992,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_E2_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_E2_rr1.wav",
+          "originalSha256": "195849bf5869bdaf3b39a34cf9500a18800686eb20593c4673e1746b56bf94f8"
+        },
+        {
+          "root": 54,
+          "tune": 0,
+          "url": "harpsichord/54.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_F#2_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_F%232_rr1.wav",
+          "originalSha256": "0cf9e7260301134acc50d3e25cf83e3024934685ee9e184a6642aa21b090c7c9"
+        },
+        {
+          "root": 56,
+          "tune": 0,
+          "url": "harpsichord/56.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_G#2_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_G%232_rr1.wav",
+          "originalSha256": "7ee41fcb3ad3af3418c10161d6c4f10f209e5dd01a0536c85f3d9e9fb14c87d6"
+        },
+        {
+          "root": 58,
+          "tune": 0,
+          "url": "harpsichord/58.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_A#2_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_A%232_rr1.wav",
+          "originalSha256": "c9dabc4eec86dba583cb2ff9ec128a3cd28a2ff266f504f2c6cd0594eba018f7"
+        },
+        {
+          "root": 60,
+          "tune": 0,
+          "url": "harpsichord/60.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_C3_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_C3_rr1.wav",
+          "originalSha256": "a5d93c1ce51c01fee2b83a369cdd1b8fdc3155d46f4e9a16e42e26878108ac83"
+        },
+        {
+          "root": 62,
+          "tune": 0,
+          "url": "harpsichord/62.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_D3_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_D3_rr1.wav",
+          "originalSha256": "b382dda36a18e3cb0fd498be97978288969e291ef3bef27e1fb904680ab14572"
+        },
+        {
+          "root": 64,
+          "tune": 0,
+          "url": "harpsichord/64.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_E3_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_E3_rr1.wav",
+          "originalSha256": "6cdb5734c697deb49289f47e00c274b5926e886d6c2eb6cae1d12680077c6f9e"
+        },
+        {
+          "root": 66,
+          "tune": 0,
+          "url": "harpsichord/66.mp3",
+          "bytes": 76653,
+          "duration": 5.382,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_F#3_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_F%233_rr1.wav",
+          "originalSha256": "6661561eeb3e603818707ed622e1a7aacb4c4a049264b42270fab70ad1221e31"
+        },
+        {
+          "root": 68,
+          "tune": 0,
+          "url": "harpsichord/68.mp3",
+          "bytes": 65565,
+          "duration": 4.599,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_G#3_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_G%233_rr1.wav",
+          "originalSha256": "4783dc50d519b5166063cd7555e39042f7b1d04b3a1ee90534ea0b19bab677f3"
+        },
+        {
+          "root": 70,
+          "tune": 0,
+          "url": "harpsichord/70.mp3",
+          "bytes": 75645,
+          "duration": 5.317,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_A#3_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_A%233_rr1.wav",
+          "originalSha256": "e1308a98058e786dbf8274871b62b281c1de63d341059efff6565709fb22dfce"
+        },
+        {
+          "root": 72,
+          "tune": 0,
+          "url": "harpsichord/72.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_C4_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_C4_rr1.wav",
+          "originalSha256": "e6d49fcd8e2efe5a49839d241caf2f244e8921e8cdecb869c4549835b38b6f8d"
+        },
+        {
+          "root": 74,
+          "tune": 0,
+          "url": "harpsichord/74.mp3",
+          "bytes": 67077,
+          "duration": 4.695,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_D4_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_D4_rr1.wav",
+          "originalSha256": "8d2071e14222b847148ad2fb5d64a71ba850569c9076209eac447e1420d1359d"
+        },
+        {
+          "root": 76,
+          "tune": 0,
+          "url": "harpsichord/76.mp3",
+          "bytes": 69597,
+          "duration": 4.869,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_E4_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_E4_rr1.wav",
+          "originalSha256": "9a6ab80a9356ab9bce87f90cd0c140c62ef697ab52ee5026cbc8f4caf8b6992d"
+        },
+        {
+          "root": 78,
+          "tune": 0,
+          "url": "harpsichord/78.mp3",
+          "bytes": 58005,
+          "duration": 4.038,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_F#4_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_F%234_rr1.wav",
+          "originalSha256": "d457367ebd4c2384ad54aec6fb4826f2b9b9cb5057da0bf9ed3c66d45b169b9c"
+        },
+        {
+          "root": 80,
+          "tune": 0,
+          "url": "harpsichord/80.mp3",
+          "bytes": 58509,
+          "duration": 4.094,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_G#4_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_G%234_rr1.wav",
+          "originalSha256": "379a46af2c518bc4b83249e71d83803fc4018ab7c001d249f1d33ce340542466"
+        },
+        {
+          "root": 82,
+          "tune": 0,
+          "url": "harpsichord/82.mp3",
+          "bytes": 58509,
+          "duration": 4.083,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_A#4_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_A%234_rr1.wav",
+          "originalSha256": "d90b46fbae51de977d07ca26f82e3614b1ae51a708ad18d938b6bd2efffe05ea"
+        },
+        {
+          "root": 84,
+          "tune": 0,
+          "url": "harpsichord/84.mp3",
+          "bytes": 49437,
+          "duration": 3.44,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_C5_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_C5_rr1.wav",
+          "originalSha256": "2df658ea8f0a168af97fa3d3f6dc6110098a8795e927ae61b944e6bf0152130b"
+        },
+        {
+          "root": 86,
+          "tune": 0,
+          "url": "harpsichord/86.mp3",
+          "bytes": 58005,
+          "duration": 4.045,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_D5_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_D5_rr1.wav",
+          "originalSha256": "acd0e5d76a0866b3ece076450ad07d6cca7891247dc166a82705bbf078ae2114"
+        },
+        {
+          "root": 88,
+          "tune": 0,
+          "url": "harpsichord/88.mp3",
+          "bytes": 41373,
+          "duration": 2.849,
+          "originalFile": "ZuckermannKitHarpsi_Normal_Sus_E5_rr1.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Chordophones/Zithers/Harpsichord%2C%20English/Sustains/Normal/ZuckermannKitHarpsi_Normal_Sus_E5_rr1.wav",
+          "originalSha256": "281f70c8c8092645813b2edff717d4fbe704425df9424fd2f376375212b7c038"
+        }
+      ]
+    },
+    {
+      "id": "xylophone",
+      "name": "木琴",
+      "credit": "Versilian Studios · VCSL Xylophone",
+      "sourceUrl": "https://github.com/sgossner/VCSL",
+      "license": "CC0-1.0",
+      "gain": 0.65,
+      "bytes": 222534,
+      "samples": [
+        {
+          "root": 67,
+          "tune": 0,
+          "url": "xylophone/67.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "Xylo_Hard_G3_ff_01_far.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Xylophone/Hard%20Mallets/Xylo_Hard_G3_ff_01_far.wav",
+          "originalSha256": "29e5f20d79cbee9db11c272c94d330cb30cfadc289cd9f97a2944e61e353f7d9"
+        },
+        {
+          "root": 72,
+          "tune": 0,
+          "url": "xylophone/72.mp3",
+          "bytes": 43389,
+          "duration": 3.006,
+          "originalFile": "Xylo_Hard_C4_ff_01_far.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Xylophone/Hard%20Mallets/Xylo_Hard_C4_ff_01_far.wav",
+          "originalSha256": "8623db2b2d56b30e8ed6f054713eeebb6403c1da39312fe15737d66a9735619a"
+        },
+        {
+          "root": 79,
+          "tune": 0,
+          "url": "xylophone/79.mp3",
+          "bytes": 33813,
+          "duration": 2.329,
+          "originalFile": "Xylo_Hard_G4_ff_01_far.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Xylophone/Hard%20Mallets/Xylo_Hard_G4_ff_01_far.wav",
+          "originalSha256": "6e21070e6d0948701ba6d11a0604aaea87a1ee2494544d74c8fb63cc797ec7ae"
+        },
+        {
+          "root": 84,
+          "tune": 0,
+          "url": "xylophone/84.mp3",
+          "bytes": 25245,
+          "duration": 1.713,
+          "originalFile": "Xylo_Hard_C5_ff_01_far.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Xylophone/Hard%20Mallets/Xylo_Hard_C5_ff_01_far.wav",
+          "originalSha256": "4282a5982eb99b798fbe9dffe1b84e4366b2b8f8fd161335f527b728edd0c083"
+        },
+        {
+          "root": 91,
+          "tune": 0,
+          "url": "xylophone/91.mp3",
+          "bytes": 19197,
+          "duration": 1.277,
+          "originalFile": "Xylo_Hard_G5_ff_01_far.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Xylophone/Hard%20Mallets/Xylo_Hard_G5_ff_01_far.wav",
+          "originalSha256": "4c9294260c14f233168464d86a853237abd9643d3cc13c11b701488335a6bee4"
+        },
+        {
+          "root": 96,
+          "tune": 0,
+          "url": "xylophone/96.mp3",
+          "bytes": 15669,
+          "duration": 1.027,
+          "originalFile": "Xylo_Hard_C6_ff_01_far.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Xylophone/Hard%20Mallets/Xylo_Hard_C6_ff_01_far.wav",
+          "originalSha256": "4e0f5cd4a1e2bc9b1de38d89293c28a65711327b22650ffedae9a43d7706691b"
+        }
+      ]
+    },
+    {
+      "id": "glockenspiel",
+      "name": "钟琴",
+      "credit": "Versilian Studios · VCSL Glockenspiel",
+      "sourceUrl": "https://github.com/sgossner/VCSL",
+      "license": "CC0-1.0",
+      "gain": 0.55,
+      "bytes": 449334,
+      "samples": [
+        {
+          "root": 79,
+          "tune": 0,
+          "url": "glockenspiel/79.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "glock_medium_G4_01.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Glockenspiel/glock_medium_G4_01.wav",
+          "originalSha256": "6c4649b13e24fa01e4634edad8fe8edf18aef33facc5d49fe53097b376bac4da"
+        },
+        {
+          "root": 84,
+          "tune": 0,
+          "url": "glockenspiel/84.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "glock_medium_C5_01.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Glockenspiel/glock_medium_C5_01.wav",
+          "originalSha256": "635f898e0bcb6975b96b18efd9c896f6f1b97ff12174a339ada4814e49675660"
+        },
+        {
+          "root": 91,
+          "tune": 0,
+          "url": "glockenspiel/91.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "glock_medium_G5_01.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Glockenspiel/glock_medium_G5_01.wav",
+          "originalSha256": "7045c0ef7260e2f1ad11a64406cf7575ed898d1207a91104d33d78caefac63e4"
+        },
+        {
+          "root": 96,
+          "tune": 0,
+          "url": "glockenspiel/96.mp3",
+          "bytes": 85221,
+          "duration": 6.0,
+          "originalFile": "glock_medium_C6_01.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Glockenspiel/glock_medium_C6_01.wav",
+          "originalSha256": "e942cbf502cf6731df2925945fe3234c876cb63f047d91007b6929887f9e4904"
+        },
+        {
+          "root": 103,
+          "tune": 0,
+          "url": "glockenspiel/103.mp3",
+          "bytes": 68085,
+          "duration": 4.775,
+          "originalFile": "glock_medium_G6_01.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Glockenspiel/glock_medium_G6_01.wav",
+          "originalSha256": "a2ba94e59119cd5272c1161fc8b8fbfb94c7b44de45a9a6cc5973b1c332103af"
+        },
+        {
+          "root": 108,
+          "tune": 0,
+          "url": "glockenspiel/108.mp3",
+          "bytes": 40365,
+          "duration": 2.787,
+          "originalFile": "glock_medium_C7_01.wav",
+          "originalUrl": "https://raw.githubusercontent.com/sgossner/VCSL/master/Idiophones/Struck%20Idiophones/Glockenspiel/glock_medium_C7_01.wav",
+          "originalSha256": "b2ecbe0e60c983bbfaa49a1f45f8a11559f7dba27b8c8a032eb2cb7366a36910"
+        }
+      ]
+    }
+  ]
+}
