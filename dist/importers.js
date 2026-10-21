@@ -28,7 +28,7 @@ function cleanNotation(source,format,ignored,allowedKeys=BASE_KEYS){
  text=text.replace(/[^\x00-\x7F]+/g,note);
  // Time suffixes are not cleaned: a typo such as A:fast must remain an error.
  text=text.split(/(:[^\s|()[\]]*)/g).map((part,i)=>{if(i%2)return part;
-  if(['letters','flow'].includes(format))return part.replace(/[A-Za-z]+/g,w=>[...w.toUpperCase()].every(k=>allowedKeys.includes(k))?w:note(w)).replace(/[^A-Za-z\s\[\]()|_;,\-]/g,note);
+  if(['letters','flow'].includes(format))return part.replace(/[A-Za-z]+/g,w=>[...w.toUpperCase()].every(k=>allowedKeys.includes(k))?w:note(w)).split('').map(c=>allowedKeys.includes(c.toUpperCase())||/[\s\[\]()|_;,\-]/.test(c)?c:note(c)).join('');
   if(format==='numbers')return part.replace(/[A-Za-z]+/g,note).replace(/[^0-7\s\[\]()|_;.,'+\-]/g,note);
   if(format==='indices')return part.replace(/[A-Za-z]+/g,note).replace(/[^0-9\s\[\]()|_;.,+\-]/g,note);
   if(format==='skyabc')return part.replace(/[A-Za-z0-9]+/g,w=>/^(?:[ABC][1-5])+$/i.test(w)?w:note(w)).replace(/[^ABCabc1-5\s\[\]()|_;.\-]/g,note);
@@ -53,13 +53,13 @@ function parse(source,format='auto',options={}){
   const str=String(value??'');if(str==='_'||str==='')return [];
   const sky=str.match(/^(?:\d+)?Key(\d+)$/i);if(sky){const i=Number(sky[1]),max=Number(opts.skySize);if(i>=max)fail('Key'+i+'超出所选源谱编号范围');warn(`Sky源谱按${max}音低至高映射，起点为低音Z；编号前缀仅作声部标记。`);if(!ASC[i])fail('源琴盘没有该Key编号');return [ASC[i]];}
   if(/^[A-Ga-g][#b]?-?\d$/.test(str))return [pitchKey(notePitch(str))].filter(Boolean);
-  if(/^\d+$/.test(str))fail('数值键位需要明确的midi音高字段或Key编号。');
+  if(/^\d+$/.test(str)&&![...str].every(k=>KEYS.includes(k)))fail('数值键位需要明确的midi音高字段或Key编号。');
   let letters=str.toUpperCase().replace(/[\s+\[\]]/g,'');if(opts.ignoreUnknown){const cleaned=cleanNotation(letters,'flow',ignored,KEYS);letters=cleaned.replace(/\s/g,'');}if([...letters].some(c=>!KEYS.includes(c)))fail('无法识别键位 '+str);return [...new Set(letters)];
  }
  function add(beat,keys,duration=1,extra={}){raw.push({beat:finite(beat,'起始拍'),keys:[...new Set(keys)],duration:Math.max(.001,finite(duration,'时值',.000001)),...extra});}
  function sequence(text,type){if(type==='flow')text=text.replace(/-/g,' - ');text=text.replace(/([\[\(])/g,' $1').replace(/([\]\)])(?=[^:\s])/g,'$1 ');let beat=0;const tokens=text.replace(/\r/g,'').split('\n').map(l=>type==='notes'?l.replace(/\/\/.*$/,''):l.replace(/#.*$/,'')).join(' ').replace(/[|，；;]/g,' ').match(/\[[^\]]*\](?::[\d.]+)?|\([^)]*\)(?::[\d.]+)?|[^\s]+/g)||[];
   for(let t of tokens){const match=t.match(/:([\d.]+)$/),d=match?Number(match[1]):Number(opts.defaultBeats);if(!Number.isFinite(d)||d<=0||d>128)fail('时值需在0—128拍之间');if(match){hasTiming=true;t=t.slice(0,match.index);}else if(t!=='-')implicitTiming=true;if(t==='-'){if(type==='flow'){add(beat,[],d);beat+=d;continue;}if(!raw.length)fail('延音前没有音符');raw[raw.length-1].duration+=d;beat+=d;hasTiming=true;continue;}
-   if(['_','0','rest','.'].includes(t)||(type==='notes'&&t==='R')){add(beat,[],d);beat+=d;continue;}
+   if((['_','rest','.'].includes(t)||(t==='0'&&!(['flow','strict'].includes(type)&&KEYS.includes('0'))))||(type==='notes'&&t==='R')){add(beat,[],d);beat+=d;continue;}
    const chord=/^[\[(]/.test(t);if(chord&&!/[\])]$/.test(t))fail('和弦括号未闭合');const inner=chord?t.slice(1,-1):t;let groups=[];
    if(type==='flow'||type==='strict'){if(!inner.trim()||[...inner.toUpperCase().replace(/\s/g,'')].some(k=>!KEYS.includes(k)))fail('连写字母谱含未知字符：'+t);if(type==='strict'&&!chord&&inner.trim().length>1)fail('标准字母谱请用空格分开，或用方括号同时按');groups=[...inner.replace(/\s/g,'').toUpperCase()].map(k=>[k]);}
    if(type==='numbers'){const ns=inner.match(/[+-]?[1-7][',]?/g)||[];if(inner.replace(/[+-]?[1-7][',]?/g,'').trim())fail('无法识别数字谱 '+t);groups=ns.map(n=>{const degree=Number(n.match(/[1-7]/)[0])-1,ri=n.startsWith('+')||n.endsWith("'")?0:n.startsWith('-')||n.endsWith(',')?2:1;return opts.notationRows?[pitchKey([60,62,64,65,67,69,71][degree]+(ri===0?12:ri===2?-12:0))].filter(Boolean):[ROWS[ri][degree]];});}
@@ -72,10 +72,10 @@ function parse(source,format='auto',options={}){
  }
  try{
   source=String(source).replace(/^\uFEFF/,'');if(!source.trim())fail('请粘贴琴谱，或点击“填入示例”体验。');if(source.length>2000000)fail('文本最多2MB');
-  if((opts._depth||0)>3)fail('嵌套曲谱过深');if(format==='midi')fail('请使用“选择曲谱文件”导入.mid/.midi文件，不能直接粘贴二进制MIDI。');if(format==='auto'){const t=(opts.ignoreUnknown&&!/^[\s]*[<{[]/.test(source)?source.replace(/【[^】]*】|\/\/[^\n]*|#.*$/gm,' ').replace(/[^\x00-\x7F]+/g,' '):source).trim();chosen=/^[{\[]/.test(t)&&/"/.test(t)?'json':t.startsWith('<')?(/id\s*=\s*['"]?ascii/i.test(t)?'skyhtml':'xml'):/\b[A-C][1-5](?!\d)/.test(t)&&!/[D-G]\d/.test(t)?'skyabc':/\b[A-G][#b]?\d/.test(t)?'notes':/\b(do|re|mi|fa|sol|la|si|ti)\b/i.test(t)?'solfege':/^[\d\s:.,'|\[\]+_-]+$/.test(t)?'numbers':'flow';warn('自动识别为：'+FORMATS[chosen].name+'；请核对规则与节奏。');}
+  if((opts._depth||0)>3)fail('嵌套曲谱过深');if(format==='midi')fail('请使用“选择曲谱文件”导入.mid/.midi文件，不能直接粘贴二进制MIDI。');if(format==='auto'){const t=(opts.ignoreUnknown&&!/^[\s]*[<{[]/.test(source)?source.replace(/【[^】]*】|\/\/[^\n]*|#.*$/gm,' ').replace(/[^\x00-\x7F]+/g,' '):source).trim();chosen=/^[{\[]/.test(t)&&/"/.test(t)?'json':t.startsWith('<')?(/id\s*=\s*['"]?ascii/i.test(t)?'skyhtml':'xml'):/\b[A-C][1-5](?!\d)/.test(t)&&!/[D-G]\d/.test(t)?'skyabc':/\b[A-G][#b]?\d/.test(t)?'notes':/\b(do|re|mi|fa|sol|la|si|ti)\b/i.test(t)?'solfege':/^[\d\s:.,'|\[\]+_-]+$/.test(t)?'numbers':'flow';if(/[0-9]/.test(KEYS)&&chosen==='numbers')warn('来源琴盘包含数字按键：自动识别仍按数字简谱解释；若数字表示物理按键，请手动选择琴盘位置字母谱。');warn('自动识别为：'+FORMATS[chosen].name+'；请核对规则与节奏。');}
   if(opts.ignoreUnknown&&['letters','flow','numbers','indices','notes','solfege','skyabc'].includes(chosen))source=cleanNotation(source,chosen,ignored,KEYS);
   if(chosen==='skyhtml'){if(typeof DOMParser==='undefined')fail('当前环境没有HTML解析器');const d=new DOMParser().parseFromString(source,'text/html'),n=d.querySelector('#ascii');if(!n)fail('HTML中未找到#ascii文本谱');return parse(n.textContent,'skyabc',opts);}
-  if(chosen==='letters'&&opts.notationRows&&JSON.stringify(ROWS)!==JSON.stringify(BASE_ROWS))sequence(source,'strict');
+  if(chosen==='letters'&&opts.notationRows)sequence(source,'strict');
   else if(chosen==='letters'){const p=parseScore(source,'letters',opts.defaultBeats);if(p.errors.length)fail(p.errors.join('；'));raw=p.events;hasTiming=p.hasTiming;implicitTiming=!source.replace(/#.*$/gm,'').split(/\s*\|\s*|\s+/).filter(Boolean).every(t=>/:([\d.]+)$/.test(t)||t==='-');}
   else if(['flow','numbers','notes','solfege','indices','skyabc'].includes(chosen))sequence(source,chosen);
   else if(chosen==='csv'){const lines=source.trim().split(/\r?\n/),sep=lines[0].includes('\t')?'\t':',',headers=lines.shift().split(sep).map(s=>s.trim().toLowerCase());if(!headers.includes('time')&&!headers.includes('beat'))fail('CSV首行需含time或beat字段');for(const line of lines){if(!line.trim())continue;if(opts.ignoreUnknown&&/^\s*(?:#|\/\/|【)/.test(line)){ignored.push(line);continue;}const cells=line.split(sep),r=Object.fromEntries(headers.map((h,i)=>[h,cells[i]?.trim()])),ms=r.time!==undefined;add(ms?finite(r.time,'time')*opts.bpm/60000:finite(r.beat,'beat'),keysFrom(r.key||r.keys),r.duration?finite(r.duration,'duration',.001)*(ms?opts.bpm/60000:1):Number(opts.defaultBeats));}hasTiming=true;}

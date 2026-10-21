@@ -1,25 +1,52 @@
-# 键间 KeyMelody · 公开版 v0.6.2
+# 键间 KeyMelody · v0.7.0
 
-键间是面向游戏弹琴爱好者的网页练习工具，支持多种琴盘、琴谱导入、动态按键提示、等待练习、节奏练习和自动演奏，帮助使用者熟悉键位、检查曲谱并练习节奏。
+面向游戏弹琴爱好者的浏览器练习工具。导入琴谱，跟随动态提示练习键位、校对节奏，也可自动演奏调试。纯HTML/CSS/JavaScript，无需后端、依赖安装或构建；音色与网页一同托管。
 
-纯HTML/CSS/JavaScript，音色与网站同源，无后端、登录或构建依赖。
+## 本次更新
 
-## 使用
+- 最近使用的5首曲谱按练习、自动演奏、导入或保存编辑的时间降序排列，重复使用置顶，刷新保留；琴盘测试不进入历史。
+- 新增14键、22键、通用36/37键半音琴盘；21键补充数字键起始和低音在上排列，保留标准21键、21键吉他与Sky15键。
+- 实际按键映射支持字母、数字及常用标点；自定义琴盘最多37键，每行独立水平偏移。
+- 当前琴盘显示简洁用途及游戏/软件示例，详细音域与布局默认折叠。游戏例子仅作社区适配参考，通用预设不代表已实测游戏原生键位。
 
-- dist/：可直接部署的完整静态网站。
-- docs/CLOUDBASE_UPDATE.md：上传腾讯云与更新现有应用的操作说明。
-- RELEASE_NOTES.md：本次公开版相对v0.5.0的累计更新。
-- THIRD_PARTY_NOTICES.md、dist/audio/licenses/：CC0音色来源与授权。
-- docs/DEVELOPMENT_HISTORY.md：历史开发记录。
+## 已有功能
 
-本地预览可运行：
+文本字母/简谱/音名/唱名/位置/顺序谱、JSON、CSV/TSV、MIDI 0/1及未压缩MusicXML导入；预览、分类忽略未知字符、来源/目标音高转换、自动演奏、单步与编辑。等待和节奏练习、三档判定、延迟校准、两键和弦兼容、错按跳过、循环和变速。六种CC0采样音色、圆形可调按键、可选提示特效、网页浮动键盘及浏览器支持时的置顶小窗。设置第五栏可访问爱发电支持链接。
 
-```bash
-python -m http.server 8000 --directory dist
-```
+## GitHub Pages：完整源码方式
 
-然后访问http://localhost:8000/。Node.js仅用于检查，安装后在根目录运行npm test即可，不需要npm install。
+1. 解压源码ZIP，进入内部的 `keymelody-v0.7.0-source` 文件夹，将里面的内容上传到公开发布仓库根目录，保留 `dist/`、`.github/` 等目录。不要只上传ZIP文件，也不要额外套一层源码文件夹。
+2. 确认仓库包含 `.github/workflows/pages.yml`；Windows如隐藏点号开头的目录，请确认 `.github` 也已上传。
+3. 打开仓库 Settings → Pages → Build and deployment，将 Source 设为 **GitHub Actions**。
+4. 进入 Actions → Publish KeyMelody to GitHub Pages → Run workflow，选择main运行。之后推送main里的网站更新会自动发布。若你的默认分支不是main，请修改工作流的branches。
+5. 成功后在Pages页面查看实际访问地址。无需手动填写用户名或仓库名到代码里。
 
-CloudBase部署专用ZIP已去除外层文件夹，根目录直接是index.html。源码包采用dist目录，若从源码部署应将输出目录设置为dist。
+此方式上传完整源码；发布内容只包含dist，不会把测试脚本与维护文档当作网站资源。
 
-用户曲谱、琴盘和设置保存在当前浏览器，重要内容请导出备份。自动演奏不向游戏发送键盘输入。Document PiP依赖浏览器支持，不提供系统鼠标穿透。六种真实采样采用CC0；音色授权不等于网站代码的开源许可，本次未新增项目代码许可证。
+## GitHub Pages：仅网页文件方式
+
+若只想快速上线，使用单独的 `keymelody-v0.7.0-github-pages.zip`：解压后把里面全部文件及audio目录放到仓库根目录，确保根目录直接有index.html。然后Settings → Pages → Source选择Deploy from a branch，Branch选择main，Folder选择/(root)，Save。此方式不用上传本源码包，也不需要Actions工作流。不要将网页文件放在仓库根目录下的dist里后仍选择/(root)。
+
+## 更新已有仓库
+
+沿用原仓库及所选部署方式，以新包覆盖相应文件，保留文件夹结构。若此前仓库首页有dist、README和测试脚本，选择源码包；若根目录直接是index.html，选择网页部署包。文件数量超过网页一次上传限制时分批上传，或使用GitHub Desktop/本地Git。源码包的.github与.gitignore也需一并更新。
+
+提交消息建议：`更新键间至 v0.7.0：最近曲谱排序与更多琴盘`。Release标签可用v0.7.0，说明可复制RELEASE_NOTES.md。没有替你创建仓库、推送GitHub或修改腾讯云。
+
+## 数据与兼容
+
+曲谱、最近记录和设置保存在每个访问者自己的浏览器，刷新和重新打开通常保留，不上传到GitHub。换电脑、浏览器、域名后不会自动同步；重要曲谱请导出备份，旧版本没有记录的历史无法追溯。无痕窗口和清理网站数据可能删除记录。
+
+36键为C3—B5、37键为C3—C6逐半音；14键为C4—B5、22键为C3—C6自然音。数字作为位置键时请选择位置字母谱/社区连写谱，0是音符、_是休止；数字简谱的0仍为休止。物理映射支持字母、顶排数字和常用标点，空格仍为播放/暂停。
+
+自动演奏仅在网页内发声，不向游戏发送按键。网页内浮窗不能自动接收其他游戏窗口中的按键，置顶小窗依赖浏览器Document PiP。不支持图片/PDF识谱、加密谱及压缩MusicXML。移动端真机与各游戏布局需实际验证。
+
+## 本地运行及检查
+
+推荐使用本地静态服务器，例如VS Code Live Server，打开dist目录。若已安装Python，也可运行 `python -m http.server 8000 --directory dist`，然后访问http://localhost:8000/。
+
+已安装Node.js时运行 `npm test`，无需npm install。包含解析、导入、琴盘、节奏、音色及最近记录六项检查。
+
+## 音色与授权
+
+六种采样素材采用CC0 1.0，完整说明、来源与加工记录位于 `dist/audio/licenses/`、`dist/audio/manifest.json` 与THIRD_PARTY_NOTICES.md。素材的授权不等于整个项目代码的开源许可证，本包没有擅自为项目代码新增许可证。

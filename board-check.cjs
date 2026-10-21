@@ -21,3 +21,20 @@ assert.equal(B.validate({...B.guitar,strumMs:0}).strumMs,0);
 const varied=parse('[ADG]','letters',B.standard);varied.events[0].noteLengths={A:1,D:2,G:1};assert.deepEqual(B.convert(varied,B.standard,B.guitar,{matchChords:true}).events[0].keys,['A','D','G']);
 
 for(const k of 'ASDFGHJZXCVBNM')assert.deepEqual(B.guitar.actions[k],B.standard.actions[k]);assert.deepEqual([...B.guitar.rows[0]].map(k=>B.guitar.actions[k].label),['C','Dm','Em','F','G','Am','G7']);
+// v0.7: extended position vocabulary, chromatic pitches and notation survive JSON roundtrips.
+for(const [b,size] of [[B.natural14,14],[B.natural22,22],[B.chromatic36,36],[B.chromatic37,37],[B.digits21,21],[B.low21,21]]){
+ assert.equal(b.rows.join('').length,size);assert.equal(new Set(b.rows.join('')).size,size);
+ const p=parse([...b.rows.join('')].map(k=>k+':0.5').join(' '),'letters',b);assert.equal(p.events.length,size);
+ const restored=parse(JSON.stringify({events:p.events}),'json',B.validate(JSON.parse(JSON.stringify(b))));assert.deepEqual(restored.events.map(e=>e.keys),p.events.map(e=>e.keys));
+}
+assert.deepEqual(Object.values(B.chromatic37.actions).flatMap(a=>a.pitches).sort((a,b)=>a-b),Array.from({length:37},(_,i)=>48+i));
+assert.deepEqual(parse('C#3 F#4 C6','notes',B.chromatic37).events.map(e=>e.keys),[['W'],['L'],['=']]);
+assert(I.parse('C6','notes',B.notation(B.chromatic36)).errors.length);
+assert.deepEqual(parse('0 = [N0=] _:1','letters',B.chromatic37).events.map(e=>e.keys),[['0'],['='],['N','0','='],[]]);
+assert.deepEqual(I.parse('0 = 【注释】','letters',{...B.notation(B.chromatic37),ignoreUnknown:true}).events.map(e=>e.keys),[['0'],['=']]);
+assert.deepEqual(parse('1 Q A','letters',B.digits21).events.map(e=>e.keys.map(k=>B.digits21.actions[k].pitches[0])),[[72],[60],[48]]);
+assert.equal(parse('1','numbers',B.digits21).events[0].keys[0],'Q');
+assert(B.convert(parse('C#3','notes',B.chromatic37),B.chromatic37,B.standard).errors.length);
+assert.deepEqual(B.convert(parse('C4','notes',B.chromatic37),B.chromatic37,B.standard).events[0].keys,['A']);
+assert.throws(()=>B.validate({rows:['ABCDEFGHIJKLMN'],actions:B.generate(['ABCDEFGHIJKLMN'])}));
+console.log('PASS: 14/22/36/37-key and alternate 21 layouts, every position roundtrip, zero/= notes, strict semitones and explicit numeric notation.');

@@ -1,15 +1,16 @@
 {
   "name": "键间 KeyMelody",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "channel": "public",
-  "releasedOn": "2026-10-20",
-  "sourceCommit": "92224a66f64609bab6f9951436aaed7041b4d39c",
-  "baseDevelopmentVersion": "0.6.2",
+  "releasedOn": "2026-10-21",
+  "sourceCommit": "bb78a3f968f6496a00bc33069113e204d5f66a19",
   "packagingChanges": [
-    "Public version label and release.json; Site identity and browser data excluded."
+    "Public version label",
+    "Added .nojekyll and release manifest; private hosting configuration excluded"
   ],
   "filesSha256": {
-    "app.js": "0eea0487429266f6875b8dff70fec59331958c2eeb428fd1035384c684fd5f60",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app.js": "efad92e509d0240aef9e8c67677281b96361b702761c4af896f01032e3028d19",
     "audio/glockenspiel/103.mp3": "bf1916049009f07019563334759080def387988e0b5ee20132db708caafbed96",
     "audio/glockenspiel/108.mp3": "e58df6841dca3b7b834c1164a4cd960c3971447ea5c3e2815c7f5472d74670e0",
     "audio/glockenspiel/79.mp3": "d53d11e64be8f9138af9efd8999233764ccb6f65864dec5f99862599a10bb07f",
@@ -81,12 +82,13 @@
     "audio/xylophone/84.mp3": "806592ab32cb02e2752e3b4cb3b3a57f97c4eafebbe92ea6722c524eed2f10d7",
     "audio/xylophone/91.mp3": "3dbe3e17d209c179bd949c23a7db1a7046d3d71febd675d274e6e0e8d55fb713",
     "audio/xylophone/96.mp3": "5f0bd10ba6525087407eaefae6071b766a23e031cfc61cd2e13fd3a62462f06d",
-    "boards.js": "b7ae2ea64297d2d8bdc2fb89edc644a0be31041459003215f16674a48eab618c",
-    "importers.js": "2d4d391f4ca72d97a70bb3ea6588569f67f16dd8c03145c82aa983754f3a8320",
-    "index.html": "532488287532a874388876de165f245384f82a3819a5de4620bea30f6ad174e9",
+    "boards.js": "35c1b181c7bd5a01d890be94b669a9df86ef20a5dd771a06ad13293a5f5acf2e",
+    "importers.js": "9c10cc1c8070446eae899603094c2c16009a5f1f1ae989f0fcf04958fe36c7d6",
+    "index.html": "de73b25b8b1c817888e6595a48b118876820b11e266ebaf54a0a2026e9c8dffd",
+    "recents.js": "a8e5047dd1b35fd6f43ddc37af4ff713db4451679094f93e8872a2c45390df05",
     "rhythm.js": "2e2cd69bdf4e831b41e3f815856b0efeea1e33a2ac7660ef8682552e6afa9eba",
     "score.js": "6f72f727441bb15ed72bf536aae00bd054f2dd24c562b0ce48d3256d129c8ebc",
     "soundbank.js": "154e4249382c14d55467a621f4d113f48c3fb206c9795a8d94323d2237376214",
-    "style.css": "b7301f6313c354945f5cde1a2c36d80eae9a89a690daef90fd9315ddcf40e39a"
+    "style.css": "c5afe078f90d797f0a3aafcf5703b35427f6b779bd7d7b785e8a3f881ceaf7de"
   }
 }
